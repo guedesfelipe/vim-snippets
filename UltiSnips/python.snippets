@@ -267,11 +267,10 @@ endglobal
 
 snippet class "class with docstrings" b
 class ${1:MyClass}(${2:object}):
-
-	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
+	`!p snip.rv = triple_quotes(snip)` ${3:Docstring for $1. } `!p snip.rv = triple_quotes(snip)`
 
 	def __init__(self$4):
-		`!p snip.rv = triple_quotes(snip)`${5:TODO: to be defined.}`!p
+		`!p snip.rv = triple_quotes(snip)` ${5:TODO: to be defined.} `!p
 snip.rv = ""
 snip >> 2
 
@@ -290,8 +289,7 @@ endsnippet
 
 snippet slotclass "class with slots and docstrings" b
 class ${1:MyClass}(${2:object}):
-
-	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
+	`!p snip.rv = triple_quotes(snip)` ${3:Docstring for $1. } `!p snip.rv = triple_quotes(snip)`
 `!p
 snip >> 1
 args = get_args(t[4])
@@ -299,7 +297,7 @@ write_slots_args(args, snip)
 `
 
 	def __init__(self$4):
-		`!p snip.rv = triple_quotes(snip)`${5:TODO: to be defined.}`!p
+		`!p snip.rv = triple_quotes(snip)` ${5:TODO: to be defined.} `!p
 snip.rv = ""
 snip >> 2
 
@@ -506,7 +504,7 @@ snippet def "function with docstrings" b
 def ${1:function}(`!p
 if snip.indent:
 	snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
-	`!p snip.rv = triple_quotes(snip)`${4:TODO: Docstring for $1.}`!p
+	`!p snip.rv = triple_quotes(snip)` ${4:TODO: Docstring for $1.} `!p
 write_function_docstring(t, snip) `
 	${5:${VISUAL:pass}}
 endsnippet
@@ -517,7 +515,7 @@ snippet defc "class method with docstrings" b
 def ${1:function}(`!p
 if snip.indent:
 	snip.rv = 'cls' + (", " if len(t[2]) else "")`${2:arg1}):
-	`!p snip.rv = triple_quotes(snip)`${4:TODO: Docstring for $1.}`!p
+	`!p snip.rv = triple_quotes(snip)` ${4:TODO: Docstring for $1.} `!p
 write_function_docstring(t, snip) `
 	${5:${VISUAL:pass}}
 endsnippet
@@ -526,7 +524,7 @@ endsnippet
 snippet defs "static method with docstrings" b
 @staticmethod
 def ${1:function}(${2:arg1}):
-	`!p snip.rv = triple_quotes(snip)`${4:TODO: Docstring for $1.}`!p
+	`!p snip.rv = triple_quotes(snip)` ${4:TODO: Docstring for $1.} `!p
 write_function_docstring(t, snip) `
 	${5:${VISUAL:pass}}
 endsnippet
